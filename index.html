@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Restaurací</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h2>RestaurantMap</h2></header>
+<form id="searchForm">
+    <label for="locationInput">Zadejte město:</label>
+    <input id="locationInput" type="text" placeholder="Například Praha" />
+
+    <label for="radiusInput">Vzdálenost (v metrech):</label>
+    <input id="radiusInput" type="number" value="5000" min="1000" step="500" />
+
+    <label for="ratingFilter">Minimální hodnocení:</label>
+    <input id="ratingFilter" type="number" value="0" min="0" max="5" step="0.1" />
+
+    <button type="submit" id="searchBtn">Hledat</button>
+
+</form>
+<button id="geoBtn">Najít restaurace podle mé polohy</button>
+<div id="mapContainer">
+    <div id="map"></div>
+    <div id="resultList"></div>
+</div>
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC7u-Sd7xnmtCdhQaseSEREvwBwhutfA0&language=cs&region=CZ&loading=async&libraries=places" defer>
+</script>
+<script src="script.js"></script>
+</body>
+</html>
